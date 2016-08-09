@@ -1,4 +1,4 @@
-# ![tikShop](https://raw.githubusercontent.com/DanTheMan827/tikSweep/master/banner.png)
+# ![tikSweep](https://raw.githubusercontent.com/DanTheMan827/tikSweep/master/banner.png)
 tikSweep is utility app meant to do one thing, remove unused tickets from the system.
 
 # Installation
