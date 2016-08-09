@@ -19,6 +19,7 @@
 #include <fstream>
 #include <cstdlib>
 #include <3ds.h>
+#include "title_types.h"
 
 u32 wait_key()
 {
@@ -60,7 +61,13 @@ void clean_tickets(){
 					u64 titleID = ticketIDs[i];
 					AM_TitleEntry entry;
 					if(
-						(typeCheck == "0000" || typeCheck == "008c" || typeCheck == "000e" || typeCheck == "8004") &&
+						(
+							typeCheck == TITLE_GAMEAPP || 
+							typeCheck == TITLE_DEMO || 
+							typeCheck == TITLE_PATCH || 
+							typeCheck == TITLE_DLC ||
+							typeCheck == TITLE_DSIWARE
+						) &&
 						(
 							!R_SUCCEEDED(AM_GetTitleInfo(MEDIATYPE_SD, 1, &titleID, &entry)) &&
 							!R_SUCCEEDED(AM_GetTitleInfo(MEDIATYPE_NAND, 1, &titleID, &entry))
