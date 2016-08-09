@@ -24,7 +24,7 @@ SOURCE_DIRS := source
 
 BUILD_FILTER := source/svchax/test/test.c
 
-EXTRA_OUTPUT_FILES :=
+EXTRA_OUTPUT_FILES := LICENSE.TXT
 
 LIBRARY_DIRS := $(DEVKITPRO)/libctru
 LIBRARIES := ctru m
