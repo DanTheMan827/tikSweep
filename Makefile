@@ -29,7 +29,7 @@ EXTRA_OUTPUT_FILES := LICENSE.TXT
 LIBRARY_DIRS := $(DEVKITPRO)/libctru
 LIBRARIES := ctru m
 
-BUILD_FLAGS := -DVERSION_STRING="\"`git describe --tags --abbrev=0`\"" -DREVISION_STRING="\"`git rev-parse --short HEAD`\""
+BUILD_FLAGS := -DBUILD_VERSION="\"`git describe --tags --abbrev=0`\"" -DBUILD_REVISION="\"`git rev-parse --short HEAD`\"" -DBUILD_DATE="\"`date -u +'%Y-%m-%d %H:%M:%S %Z'`\""
 RUN_FLAGS := 
 
 # 3DS CONFIGURATION #

@@ -75,15 +75,13 @@ void clean_tickets(){
 					) {
 						AM_DeleteTicket(titleID);
 						deletedCount++;
-						printf("Deleted ");
-						printf(cur);
-						printf("\n");
+						printf("Deleted %s \n", cur);
 					}
 				}
 			}
 		}
 	}
-	printf("\nTotal tickets: %lu\n", ticketCount);
+	printf("\nTotal tickets: %lu \n", ticketCount);
 	printf("Deleted tickets: %lu", deletedCount);
 	printf("\n\nPress any button to exit.");
 	wait_key();
@@ -96,10 +94,11 @@ void action_about(gfxScreen_t screen){
     
     consoleClear();
 	
-	printf(CONSOLE_RED "\n tikSweep " VERSION_STRING " by DanTheMan827\n\n" CONSOLE_RESET);
-    printf("  Remove unused tickets.\n\n");
-
-    printf(" Commit: " REVISION_STRING);
+	printf(CONSOLE_RED "\n tikSweep %s by DanTheMan827\n\n" CONSOLE_RESET, BUILD_VERSION);
+    printf("  Remove unused tickets.\n\n\n");
+	printf(CONSOLE_YELLOW " Build Info\n\n" CONSOLE_RESET);
+	printf("    Date: %s \n\n", BUILD_DATE);
+    printf("  Commit: %s \n\n", BUILD_REVISION);
     
     consoleSelect(currentConsole);
 }
